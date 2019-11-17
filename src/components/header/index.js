@@ -15,7 +15,7 @@ export default props => {
           <Link to="/">
             {props.siteTitle && props.siteTitle
               ? props.siteTitle
-              : `Furry Canine`}
+              : `Furry Canines`}
           </Link>
         </p>
       </div>
