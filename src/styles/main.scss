@@ -1,63 +1,82 @@
-@import "./utils/vars";
-@import "./utils/mixins";
+@import './utils/vars';
+@import './utils/mixins';
 
-@import "./typography/index";
+@import './typography/index';
 
-@import "./buttons/index";
-@import "./tables/index";
-@import "./forms/index";
+@import './buttons/index';
+@import './tables/index';
+@import './forms/index';
 
-@import "./header/index";
-@import "./grid/index";
-@import "./card/index";
-@import "./post/index";
-@import "./about/index";
-@import "./404/index";
-@import "./category/index";
-@import "./subscribe/index";
-@import "./footer/index";
-@import "./page/index";
-@import "./pagination/index";
+@import './header/index';
+@import './grid/index';
+@import './card/index';
+@import './post/index';
+@import './about/index';
+@import './404/index';
+@import './category/index';
+@import './subscribe/index';
+@import './footer/index';
+@import './page/index';
+@import './pagination/index';
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: $glitter;
+    margin: 0;
+    padding: 0;
+    background-color: $glitter;
 }
 
 p::selection {
-  background-color: $primary;
-  color: #fff;
+    background-color: $primary;
+    color: #fff;
 }
 
 .container {
-  max-width: $max-width;
-  margin: $margin-auto;
-  padding-top: 4rem;
-  padding-left: 15px;
-  padding-right: 15px;
-  &__flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-  }
+    max-width: $max-width;
+    margin: $margin-auto;
+    padding-top: 4rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+}
+
+.share {
+    padding: 4rem 0 2rem 0;
+    max-width: 768px;
+    width: 100%;
+    .top {
+        text-align: center;
+    }
+    .bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .icon {
+        font-size: 2rem;
+    }
 }
 
 .icon {
-  color: $primary;
+    color: $primary;
 }
 
 @media (min-width: 768px) {
-  .container {
-    padding: $padding-small;
-  }
+    .container {
+        padding: $padding-small;
+    }
 }
 
 @media (min-width: 960px) {
-  .container {
-    &__flex {
-      flex-direction: row;
+    .container {
+        &__flex {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
-  }
 }
