@@ -1,0 +1,30 @@
+@import "./brand";
+@import "./toggle";
+@import "./navbar";
+
+.header {
+  display: flex;
+  padding: 0.7rem 15px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $glitter;
+  z-index: 1000;
+  position: fixed;
+  width: 100vw;
+}
+
+.header-fixed-top {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (min-width: 768px) {
+  .header {
+    position: relative;
+    max-width: $max-width;
+    margin: $margin-auto;
+    padding: $padding-small;
+    background-color: transparent;
+  }
+}

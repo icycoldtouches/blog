@@ -1,0 +1,11 @@
+.pagination {
+  padding: 2rem 0;
+  max-width: 768px;
+  margin: $margin-auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  &__numbers {
+    padding: 0 0.5rem;
+  }
+}

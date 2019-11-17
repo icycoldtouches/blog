@@ -1,0 +1,51 @@
+.btn {
+  display: block;
+  padding: $padding-btn;
+  margin-bottom: $margin-small;
+  @include transition(
+    color 0.3s ease-in-out,
+    border 0.3s ease-in-out,
+    background-color 0.3s ease-in-out
+  );
+  font-size: 18px;
+  max-width: fit-content;
+  font-weight: 400;
+  &__primary {
+    color: $secondary;
+    background-color: $primary;
+    border: 1px solid transparent;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $primary;
+      background-color: transparent;
+      border: 1px solid $primary;
+      outline: none;
+    }
+    &--small {
+      font-size: 16px;
+      padding: $padding-btn-small;
+    }
+  }
+  &__secondary {
+    color: $primary;
+    background-color: transparent;
+    border: 1px solid $primary;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $secondary;
+      background-color: $primary;
+      border: 1px solid transparent;
+      outline: none;
+    }
+    &--small {
+      font-size: 16px;
+      padding: $padding-btn-small;
+    }
+  }
+  &__full-w {
+    width: 100%;
+    max-width: unset;
+  }
+}

@@ -1,0 +1,16 @@
+.page {
+  max-width: 768px;
+  margin: $margin-auto;
+  padding: 5rem 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__title {
+    text-align: left;
+  }
+  &__content {
+    text-align: left;
+  }
+}

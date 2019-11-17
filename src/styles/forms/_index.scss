@@ -1,0 +1,35 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.form {
+  &__group {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: $margin-large;
+    width: 100%;
+    label {
+      color: $primary;
+      width: 100px;
+    }
+    input,
+    textarea {
+      border: none;
+      border-bottom: 1px solid $primary;
+      margin-left: $margin-small;
+      width: 100%;
+      &:focus,
+      &:active {
+        outline: none;
+        &::-webkit-input-placeholder {
+          color: darken($text, 25%);
+        }
+      }
+      &::-webkit-input-placeholder {
+        color: lighten($text, 15%);
+      }
+    }
+  }
+}

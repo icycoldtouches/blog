@@ -1,0 +1,63 @@
+@import "./utils/vars";
+@import "./utils/mixins";
+
+@import "./typography/index";
+
+@import "./buttons/index";
+@import "./tables/index";
+@import "./forms/index";
+
+@import "./header/index";
+@import "./grid/index";
+@import "./card/index";
+@import "./post/index";
+@import "./about/index";
+@import "./404/index";
+@import "./category/index";
+@import "./subscribe/index";
+@import "./footer/index";
+@import "./page/index";
+@import "./pagination/index";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $glitter;
+}
+
+p::selection {
+  background-color: $primary;
+  color: #fff;
+}
+
+.container {
+  max-width: $max-width;
+  margin: $margin-auto;
+  padding-top: 4rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+}
+
+.icon {
+  color: $primary;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: $padding-small;
+  }
+}
+
+@media (min-width: 960px) {
+  .container {
+    &__flex {
+      flex-direction: row;
+    }
+  }
+}

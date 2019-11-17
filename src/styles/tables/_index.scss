@@ -1,0 +1,35 @@
+table {
+	display: table;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 2px;
+	border-bottom: 1px solid $primary;
+}
+
+thead {
+	color: $secondary;
+	background-color: $primary;
+    display: table-header-group;
+    vertical-align: middle;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+}
+
+tfoot {
+    display: table-footer-group;
+    vertical-align: middle;
+}
+
+tr {
+	vertical-align: middle;
+	border-bottom: 1px solid $primary;
+}
+
+th:first-child,
+td:first-child {
+	padding-left: $padding-small !important;
+}
+

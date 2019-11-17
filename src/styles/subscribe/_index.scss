@@ -1,0 +1,51 @@
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 10px 0 10px;
+  background-color: #fff;
+  margin-bottom: 4rem;
+  &__title {
+    text-align: center;
+  }
+  &__form {
+    width: 100%;
+    &--group {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      input {
+        margin-bottom: 2rem;
+        border: none;
+        border-bottom: 1px solid $primary;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .subscribe {
+    padding: 2rem 20px;
+    &__form {
+      &--group {
+        flex-direction: row;
+        height: 100px;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 0 40px;
+        max-width: 768px;
+        margin: $margin-auto;
+        input {
+          margin-bottom: 0;
+        }
+        button {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

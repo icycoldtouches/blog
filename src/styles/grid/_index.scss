@@ -1,0 +1,22 @@
+.grid {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 960px) {
+  .grid {
+    flex-direction: row;
+    &__left {
+      flex-basis: 48%;
+      margin-right: 2%;
+      display: flex;
+      flex-direction: column;
+    }
+    &__right {
+      flex-basis: 48%;
+      margin-left: 2%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 2rem auto;
+  max-width: 768px;
+  &--image {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .about {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &--image {
+      width: 550px;
+      margin-right: 2rem;
+    }
+  }
+}
