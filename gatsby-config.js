@@ -7,6 +7,7 @@ module.exports = {
         titleTemplate: `%s - Knowledge Makes Your Dog happy.`,
         description: `Furry Canines Team offers practical, real-life tips and training advice to help you properly care for your dog.`,
         url: 'https://furrycanines.com',
+        siteUrl: 'https://furrycanines.com',
         image: `/images/_MG_0651.jpeg`,
         twitterUsername: `@furrycanines`
     },
@@ -16,7 +17,12 @@ module.exports = {
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
         `gatsby-transformer-remark`,
-        `gatsby-plugin-sitemap`,
+        {
+            resolve: `gatsby-plugin-sitemap`,
+            options: {
+                output: `/sitemap.xml`
+            }
+        },
         {
             resolve: `gatsby-source-contentful`,
             options: {
