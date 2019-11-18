@@ -36,6 +36,7 @@ export default ({ data, location }) => {
                         data.contentfulBlogPost.postCategory.categoryTitle
                     }
                     postDate={data.contentfulBlogPost.postDate}
+                    updatedAt={data.contentfulBlogPost.updatedAt}
                     authorSlug={data.contentfulBlogPost.postAuthor.authorSlug}
                     authorName={data.contentfulBlogPost.postAuthor.authorName}
                     postFeaturedImage={
@@ -48,6 +49,7 @@ export default ({ data, location }) => {
                         data.contentfulBlogPost.postBody.childMarkdownRemark
                             .html
                     }
+                    location={location}
                 />
                 <Share
                     href={location.href}
@@ -93,7 +95,8 @@ export const postQuery = graphql`
                 categorySlug
                 categoryTitle
             }
-            postDate
+            postDate(formatString: "YYYY-MM-DD")
+            updatedAt(formatString: "YYYY-MM-DD")
             postDescription {
                 postDescription
             }
