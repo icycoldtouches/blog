@@ -4,28 +4,28 @@ import Logo from '../../../images/favicon.png';
 
 export default props => {
     const convertDate = new Date(props.postDate).toDateString();
-    console.log(convertDate);
     return (
         <main className='post' role='main'>
-            <div
-                itemProp='publisher'
-                itemScope
-                itemType='https://schema.org/Organization'>
-                <div
-                    itemProp='logo'
-                    itemScope
-                    itemType='https://schema.org/ImageObject'>
-                    <meta itemProp='url' content={Logo} />
-                    <meta itemProp='width' content='40' />
-                    <meta itemProp='height' content='40' />
-                </div>
-                <meta itemProp='name' content={props.title} />
-            </div>
             <article
                 itemScope
                 itemType='https://schema.org/BlogPosting'
                 itemID={`#${props.postSlug}`}>
                 <link itemProp='mainEntityOfPage' href={props.location.href} />
+                <div
+                    itemProp='publisher'
+                    itemScope
+                    itemType='https://schema.org/Organization'>
+                    <div
+                        itemProp='logo'
+                        itemScope
+                        itemType='https://schema.org/ImageObject'>
+                        <meta itemProp='url' content={Logo} />
+                        <meta itemProp='width' content='40' />
+                        <meta itemProp='height' content='40' />
+                    </div>
+                    <meta itemProp='name' content='Furry Canines' />
+                    <meta itemProp='url' content={props.location.origin} />
+                </div>
                 <header>
                     <h1 className='post__title' itemProp='headline'>
                         {props.title}
