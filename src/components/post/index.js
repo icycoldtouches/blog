@@ -3,30 +3,31 @@ import { Link } from 'gatsby';
 import Logo from '../../../images/favicon.png';
 
 export default props => {
-    const convertDate = new Date(props.postDate).toISOString();
+    const convertDate = new Date(props.postDate).toDateString();
+    console.log(convertDate);
     return (
         <main className='post' role='main'>
+            <div
+                itemProp='publisher'
+                itemScope
+                itemType='https://schema.org/Organization'>
+                <div
+                    itemProp='logo'
+                    itemScope
+                    itemType='https://schema.org/ImageObject'>
+                    <meta itemProp='url' content={Logo} />
+                    <meta itemProp='width' content='40' />
+                    <meta itemProp='height' content='40' />
+                </div>
+                <meta itemProp='name' content={props.title} />
+            </div>
             <article
                 itemScope
                 itemType='https://schema.org/BlogPosting'
                 itemID={`#${props.postSlug}`}>
                 <link itemProp='mainEntityOfPage' href={props.location.href} />
-                <div
-                    itemProp='publisher'
-                    itemScope
-                    itemType='https://schema.org/Organization'>
-                    <div
-                        itemProp='logo'
-                        itemScope
-                        itemType='https://schema.org/ImageObject'>
-                        <meta itemProp='url' content={Logo} />
-                        <meta itemProp='width' content='60' />
-                        <meta itemProp='height' content='60' />
-                    </div>
-                    <meta itemProp='name' content='Furry Canines'></meta>
-                </div>
                 <header>
-                    <h1 className='post__title' itemProp='name headline'>
+                    <h1 className='post__title' itemProp='headline'>
                         {props.title}
                     </h1>
                     <p className='post__meta'>
@@ -44,7 +45,7 @@ export default props => {
                         <time
                             dateTime={props.postDate}
                             itemProp='datePublished'>
-                            {props.postDate}
+                            {convertDate}
                         </time>{' '}
                         By{' '}
                         <span
@@ -64,7 +65,8 @@ export default props => {
                             src={props.postFeaturedImage.src}
                             className='post__image'
                             width='768'
-                            itemprop='url'
+                            itemProp='url'
+                            alt={props.title}
                         />
                     </div>
                     <p>{props.postDescription}</p>

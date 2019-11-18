@@ -83,7 +83,7 @@ export const postQuery = graphql`
                 }
                 authorImage {
                     fluid {
-                        ...GatsbyContentfulFluid
+                        ...GatsbyContentfulFluid_withWebp
                     }
                 }
             }
@@ -103,7 +103,7 @@ export const postQuery = graphql`
             }
             postFeaturedImage {
                 fluid {
-                    ...GatsbyContentfulFluid
+                    ...GatsbyContentfulFluid_withWebp
                 }
             }
             postSlug
