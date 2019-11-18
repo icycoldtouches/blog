@@ -4,7 +4,6 @@ import Logo from '../../../images/favicon.png';
 
 export default props => {
     const convertDate = new Date(props.postDate).toISOString();
-    console.log(props);
     return (
         <main className='post' role='main'>
             <article
@@ -13,18 +12,18 @@ export default props => {
                 itemID={`#${props.postSlug}`}>
                 <link itemProp='mainEntityOfPage' href={props.location.href} />
                 <div
-                    itemprop='publisher'
-                    itemscope
-                    itemtype='https://schema.org/Organization'>
+                    itemProp='publisher'
+                    itemScope
+                    itemType='https://schema.org/Organization'>
                     <div
-                        itemprop='logo'
-                        itemscope
-                        itemtype='https://schema.org/ImageObject'>
-                        <meta itemprop='url' content={Logo} />
-                        <meta itemprop='width' content='60' />
-                        <meta itemprop='height' content='60' />
+                        itemProp='logo'
+                        itemScope
+                        itemType='https://schema.org/ImageObject'>
+                        <meta itemProp='url' content={Logo} />
+                        <meta itemProp='width' content='60' />
+                        <meta itemProp='height' content='60' />
                     </div>
-                    <meta itemprop='name' content='Furry Canines'></meta>
+                    <meta itemProp='name' content='Furry Canines'></meta>
                 </div>
                 <header>
                     <h1 className='post__title' itemProp='name headline'>
