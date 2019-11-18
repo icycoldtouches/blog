@@ -19,35 +19,40 @@ export default props => {
             <div className='bottom'>
                 <a
                     href={`mailto:?subject=${props.title}&body=Hey I saw this article and I thought it might be interesting for you ${props.href}`}
-                    target='_blank'>
+                    target='_blank'
+                    rel='noopener noreferrer'>
                     <IconContext.Provider value={{ className: 'icon' }}>
                         <IoIosMail />
                     </IconContext.Provider>
                 </a>
                 <a
                     href={`http://www.facebook.com/sharer.php?u=${props.href}`}
-                    target='_blank'>
+                    target='_blank'
+                    rel='noopener noreferrer'>
                     <IconContext.Provider value={{ className: 'icon' }}>
                         <IoLogoFacebook />
                     </IconContext.Provider>
                 </a>
                 <a
                     href={`http://www.linkedin.com/shareArticle?mini=true&amp;url=${props.href}`}
-                    target='_blank'>
+                    target='_blank'
+                    rel='noopener noreferrer'>
                     <IconContext.Provider value={{ className: 'icon' }}>
                         <IoLogoLinkedin />
                     </IconContext.Provider>
                 </a>
                 <a
                     href={`http://reddit.com/submit?url=${props.href}&title=${props.title}`}
-                    target='_blank'>
+                    target='_blank'
+                    rel='noopener noreferrer'>
                     <IconContext.Provider value={{ className: 'icon' }}>
                         <IoLogoReddit />
                     </IconContext.Provider>
                 </a>
                 <a
                     href={`http://www.tumblr.com/share/link?url=${props.href}&title=${props.title}`}
-                    target='_blank'>
+                    target='_blank'
+                    rel='noopener noreferrer'>
                     <IconContext.Provider value={{ className: 'icon' }}>
                         <IoLogoTumblr />
                     </IconContext.Provider>
