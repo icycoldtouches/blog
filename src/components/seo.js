@@ -26,6 +26,52 @@ const SEO = ({ title, description, image, pathname, article }) => (
             return (
                 <>
                     <Helmet title={seo.title} titleTemplate={titleTemplate}>
+                        <meta itemprop='bookFormat' content='EBook/DAISY3' />
+                        <meta
+                            itemprop='accessibilityFeature'
+                            content='largePrint/CSSEnabled'
+                        />
+                        <meta
+                            itemprop='accessibilityFeature'
+                            content='highContrast/CSSEnabled'
+                        />
+                        <meta
+                            itemprop='accessibilityFeature'
+                            content='resizeText/CSSEnabled'
+                        />
+                        <meta
+                            itemprop='accessibilityFeature'
+                            content='displayTransformability'
+                        />
+                        <meta
+                            itemprop='accessibilityFeature'
+                            content='longDescription'
+                        />
+                        <meta
+                            itemprop='accessibilityFeature'
+                            content='alternativeText'
+                        />
+                        <meta
+                            itemprop='accessibilityControl'
+                            content='fullKeyboardControl'
+                        />
+                        <meta
+                            itemprop='accessibilityControl'
+                            content='fullMouseControl'
+                        />
+                        <meta
+                            itemprop='accessibilityHazard'
+                            content='noFlashingHazard'
+                        />
+                        <meta
+                            itemprop='accessibilityHazard'
+                            content='noMotionSimulationHazard'
+                        />
+                        <meta
+                            itemprop='accessibilityHazard'
+                            content='noSoundHazard'
+                        />
+                        <meta itemprop='accessibilityAPI' content='ARIA' />
                         <meta name='description' content={seo.description} />
                         <meta name='image' content={seo.image} />
                         {seo.url && (

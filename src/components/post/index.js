@@ -9,11 +9,12 @@ export default props => {
     console.log(props);
     return (
         <main className='post' role='main'>
-            <article itemScope itemType='http://schema.org/BlogPosting'>
+            <article itemScope itemType='https://schema.org/BlogPosting'>
                 <link
                     itemProp='mainEntityOfPage'
                     href={props.location.origin}
                 />
+                <meta itemprop='publisher' content='Furry Canines' />
                 <header>
                     <h1 className='post__title' itemProp='name headline'>
                         {props.title}
@@ -36,14 +37,19 @@ export default props => {
                             {props.postDate}
                         </time>{' '}
                         By{' '}
-                        <span itemScope itemProp='author'>
+                        <span
+                            itemProp='author'
+                            itemScope
+                            itemType='https://schema.org/Person'>
+                            >
+                            <meta itemProp='name' content={props.authorName} />
                             {props.authorName}
                         </span>
                     </p>
                     <div
                         itemProp='image'
                         itemScope
-                        itemType='http://schema.org/ImageObject'>
+                        itemType='https://schema.org/ImageObject'>
                         <img
                             src={props.postFeaturedImage.src}
                             className='post__image'
