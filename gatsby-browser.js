@@ -1,1 +1,1 @@
-require('./ads.txt');
+
