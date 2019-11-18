@@ -91,6 +91,16 @@ module.exports = {
                     `/dog-supplies`
                 ]
             }
+        },
+        {
+            resolve: `gatsby-plugin-netlify`,
+            options: {
+                mergeSecurityHeaders: true,
+                mergeLinkHeaders: true,
+                mergeCachingHeaders: true,
+                transformHeaders: (headers, path) => headers,
+                generateMatchPathRewrites: true
+            }
         }
     ]
 };
