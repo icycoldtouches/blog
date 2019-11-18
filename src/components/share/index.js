@@ -59,7 +59,8 @@ export default props => {
                 </a>
                 <a
                     href={`http://twitter.com/intent/tweet?text=${props.title}&url=${props.href}&hashtags=#furrycanines`}
-                    target='_blank'>
+                    target='_blank'
+                    rel='noopener noreferrer'>
                     <IconContext.Provider value={{ className: 'icon' }}>
                         <IoLogoTwitter />
                     </IconContext.Provider>
