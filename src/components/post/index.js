@@ -36,11 +36,7 @@ export default props => {
                             {props.postDate}
                         </time>{' '}
                         By{' '}
-                        <span
-                            itemScope
-                            itemProp='author'
-                            itemptype='http://schema.org/Person'>
-                            <meta itemProp='name' content={props.authorName} />
+                        <span itemScope itemProp='author'>
                             {props.authorName}
                         </span>
                     </p>
