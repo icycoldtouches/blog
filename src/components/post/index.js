@@ -26,6 +26,7 @@ export default props => {
                     <meta itemProp='name' content='Furry Canines' />
                     <meta itemProp='url' content={props.location.origin} />
                 </div>
+                <meta itemProp='isFamilyFriendly' content='true' />
                 <header>
                     <h1 className='post__title' itemProp='headline'>
                         {props.title}
@@ -52,7 +53,6 @@ export default props => {
                             itemProp='author'
                             itemScope
                             itemType='https://schema.org/Person'>
-                            >
                             <meta itemProp='name' content={props.authorName} />
                             {props.authorName}
                         </span>
