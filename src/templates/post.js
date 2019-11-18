@@ -49,6 +49,7 @@ export default ({ data, location }) => {
                         data.contentfulBlogPost.postBody.childMarkdownRemark
                             .html
                     }
+                    postSlug={data.contentfulBlogPost.postSlug}
                     location={location}
                 />
                 <Share

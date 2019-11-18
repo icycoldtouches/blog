@@ -1,20 +1,31 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Img from 'gatsby-image';
-
-import Moment from 'react-moment';
+import Logo from '../../../images/favicon.png';
 
 export default props => {
     const convertDate = new Date(props.postDate).toISOString();
     console.log(props);
     return (
         <main className='post' role='main'>
-            <article itemScope itemType='https://schema.org/BlogPosting'>
-                <link
-                    itemProp='mainEntityOfPage'
-                    href={props.location.origin}
-                />
-                <meta itemprop='publisher' content='Furry Canines' />
+            <article
+                itemScope
+                itemType='https://schema.org/BlogPosting'
+                itemID={`#${props.postSlug}`}>
+                <link itemProp='mainEntityOfPage' href={props.location.href} />
+                <div
+                    itemprop='publisher'
+                    itemscope
+                    itemtype='https://schema.org/Organization'>
+                    <div
+                        itemprop='logo'
+                        itemscope
+                        itemtype='https://schema.org/ImageObject'>
+                        <meta itemprop='url' content={Logo} />
+                        <meta itemprop='width' content='60' />
+                        <meta itemprop='height' content='60' />
+                    </div>
+                    <meta itemprop='name' content='Furry Canines'></meta>
+                </div>
                 <header>
                     <h1 className='post__title' itemProp='name headline'>
                         {props.title}
