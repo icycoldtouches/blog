@@ -9,7 +9,7 @@ export default props => {
     console.log(props);
     return (
         <main className='post' role='main'>
-            <article itemScope itemType='http://schema.org/BlogPosting'>
+            <article itemScope itemType='http://schema.org/Article'>
                 <link itemProp='mainEntityOfPage' href={props.location.href} />
                 <header>
                     <h1 className='post__title' itemProp='name headline'>
