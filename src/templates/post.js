@@ -8,7 +8,6 @@ import SEO from '../components/seo';
 import Header from '../components/header';
 import Post from '../components/post';
 import Share from '../components/share';
-import About from '../components/sidebar/about';
 
 import SubscirbeFrom from '../components/subscribe';
 import Footer from '../components/footer';
@@ -58,13 +57,6 @@ export default ({ data, location }) => {
                 />
             </div>
             <div className='container'>
-                <About
-                    image={data.contentfulBlogPost.postAuthor.authorImage.fluid}
-                    alt={data.contentfulBlogPost.postAuthor.authorName}
-                    name={data.contentfulBlogPost.postAuthor.authorName}
-                    slug={data.contentfulBlogPost.postAuthor.authorSlug}
-                    bio={data.contentfulBlogPost.postAuthor.authorBio.authorBio}
-                />
                 <SubscirbeFrom />
                 <Footer />
             </div>
